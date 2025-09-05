@@ -1,14 +1,17 @@
 const express = require("express");
 const app = express();
+const cors = require("cors")
 const dotenv = require("dotenv")
 const connectToDb = require("./config/db")
 const authRoute = require("./routes/authRoute")
+
 dotenv.config();
 const PORT = process.env.PORT || 8080
 
 
 // middleware
-app.use(express.json());
+app.use(cors())  // allow request from frontend
+app.use(express.json()); //for parse json body
 app.use("/auth", authRoute)
 
 app.get("/", (req,res)=>{

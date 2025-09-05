@@ -1,0 +1,23 @@
+/* scanner container */
+#reader {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* header */
+#reader__scan_region {
+  border: 2px dashed #4caf50 !important;
+  border-radius: 12px;
+}
+
+/* camera permission text */
+#reader__status_span {
+  color: #222 !important;
+  font-size: 14px;
+}
+#camera-reader video{
+  width: 100%;
+  height: 100%
+  ;
+}
